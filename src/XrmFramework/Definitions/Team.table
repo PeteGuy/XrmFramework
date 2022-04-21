@@ -4,9 +4,29 @@
   "CollName": "teams",
   "Cols": [
     {
+      "LogName": "businessunitid",
+      "Name": "BusinessUnitId",
+      "Type": "Lookup",
+      "Capa": 13,
+      "Locked": true, 
+      "Labels": [
+      ]
+    },
+    {
+      "LogName": "teamtype",
+      "Name": "TeamType",
+      "Type": "Picklist",
+      "EnumName": "team|teamtype",
+      "Capa": 13,
+      "Locked": true,
+      "Labels": [
+      ]
+    },
+    {
       "LogName": "azureactivedirectoryobjectid",
       "Name": "AzureActiveDirectoryObjectId",
       "Type": "Uniqueidentifier",
+      "Locked": true,
       "Capa": 13,
       "Labels": [
         {
@@ -20,6 +40,7 @@
       "Name": "MembershipType",
       "Type": "Picklist",
       "Capa": 13,
+      "Locked": true,
       "Labels": [
         {
           "Label": "Team Membership Type",
@@ -34,6 +55,7 @@
       "Type": "String",
       "PrimaryType": "Name",
       "Capa": 15,
+      "Locked": true,
       "Labels": [
         {
           "Label": "Nom de l’équipe",
@@ -48,6 +70,7 @@
       "Type": "Uniqueidentifier",
       "PrimaryType": "Id",
       "Capa": 13,
+      "Locked": true,
       "Labels": [
         {
           "Label": "Équipe",
@@ -3877,8 +3900,56 @@
   ],
   "Enums": [
     {
+      "LogName": "team|teamtype",
+      "Name": "TypeDEquipe",
+      "Locked": true,
+      "Values": [
+        {
+          "Value": 0,
+          "Name": "Proprietaire",
+          "Labels": [
+            {
+              "Label": "Owner",
+              "LangId": 1036
+            }
+          ]
+        },
+        {
+          "Value": 1,
+          "Name": "Acces",
+          "Labels": [
+            {
+              "Label": "Access",
+              "LangId": 1036
+            }
+          ]
+        },
+        {
+          "Value": 2,
+          "Name": "GroupeDeSecurite_AAD",
+          "Labels": [
+            {
+              "Label": "AAD Security Group",
+              "LangId": 1036
+            }
+          ]
+        },
+        {
+          "Value": 3,
+          "Name": "GroupeOffice_AAD",
+          "Labels": [
+            {
+              "Label": "AAD Office Group",
+              "LangId": 1036
+            }
+          ]
+        }
+      ]
+    },
+    {
       "LogName": "team|membershiptype",
       "Name": "MembershipType",
+      "Locked": true,
       "Values": [
         {
           "Name": "MembersAndGuests",

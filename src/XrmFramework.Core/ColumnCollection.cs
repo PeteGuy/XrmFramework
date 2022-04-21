@@ -17,12 +17,12 @@ namespace XrmFramework.Core
 
             if (Columns.TryGetValue(item.LogicalName, out var existingColumn))
             {
-                if (item.Selected)
+                if (item.Selected || item.IsLocked)
                 {
                     existingColumn.Name = item.Name;
                     existingColumn.Selected = true;
                 }
-                else if (existingColumn.Selected)
+                else if (existingColumn.Selected || existingColumn.IsLocked)
                 {
                     item.Name = existingColumn.Name;
                     item.Selected = true;
