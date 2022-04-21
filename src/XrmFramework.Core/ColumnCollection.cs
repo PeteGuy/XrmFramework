@@ -81,6 +81,14 @@ namespace XrmFramework.Core
             return Columns.ContainsKey(item.LogicalName);
         }
 
+        public void MergeColumns(IEnumerable<Column> items)
+        {
+            foreach (var column in items)
+            {
+                Add(column);
+            }
+        }
+
         public void CopyTo(Column[] array, int arrayIndex) => Columns.Values.CopyTo(array, arrayIndex);
 
         public bool Remove(Column item)

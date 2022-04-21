@@ -33,6 +33,7 @@
 
   <files>
     <file src="**\*.cs" target="contentFiles\cs\any\__Imports\XrmFramework" exclude="obj\**;**\AssemblyInfo.cs;**\CrmServiceClientDummy.cs" />
+    <file src="**\*.table" target="content\tables\" />
 
     <file src="build\**\*" target="build" />
 
